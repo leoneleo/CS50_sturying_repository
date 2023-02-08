@@ -1,18 +1,35 @@
 #include <stdio.h>
 
+float average(int array[], int size);
+
 int main(void) 
 {
-   int scores[3];
-   size_t size = sizeof(scores) / sizeof(scores[0]);
+    int size;
+    printf("How many scores are there? ");
+    scanf("%i", &size);
+    int scores[size];
 
+    float avg;
+    avg = average(scores, size);
+    printf (" Final score: %f\n", avg);
+
+}
+
+
+
+
+float average(int array[], int size)
+{
+    float avg=0;
     for (int i = 0; i < size; i++)
     {
         printf("what is your score?: ");
-        scanf("%i", &scores[i]);
+        scanf("%i", &array[i]);
+        avg += array[i];
         
     }
+    avg = avg/size;
 
-    printf("Average: %.2f\n", (scores[0]+scores[1]+scores[2])/ (float) 3);
-    
 
+    return avg;
 }
