@@ -49,12 +49,13 @@ int main (void)
         u[0] = toupper(u[0]);
     }
     
-
-    free(t);
-    free(u);
-
     printf("%s\n", s);
     printf("%s\n", t);
     printf("%s\n", u);
+    
+    free(t);
+    free(u);
+
+    
 
 }
