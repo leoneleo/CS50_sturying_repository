@@ -50,6 +50,8 @@ int main (void)
     }
     
 
+    free(t);
+    free(u);
 
     printf("%s\n", s);
     printf("%s\n", t);
